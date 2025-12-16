@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Anthony Riccelli - Network Engineer and Full-Stack Developer." />
+  <title>Contact | Anthony Riccelli</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="noopener" />
+  
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" id="theme-icon"></i>
+      </button>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="contact-section reveal">
+      <h1>Contact</h1>
+      <p>If you want to reach me, here are the best places:</p>
+
+      <div class="contact-info">
+        <ul>
+          <li>
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Phone:</strong>
+              <a href="tel:+13216262530">(321) 626-2530</a>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email:</strong>
+              <a href="mailto:anthonyriccelli7898@gmail.com">anthonyriccelli7898@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-globe"></i>
+            <div>
+              <strong>Website:</strong>
+              <a href="https://anthonyriccelli.dev" target="_blank" rel="noopener">anthonyriccelli.dev</a>
+            </div>
+          </li>
+          <li>
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/anthonyriccelli1/anthony-portfolio" target="_blank" rel="noopener">github.com/anthonyriccelli1</a>
+            </div>
+          </li>
+          <li>
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/anthonyjriccelli/" target="_blank" rel="noopener">linkedin.com/in/anthonyjriccelli</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send me a message</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-message" id="form-message"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Anthony Riccelli</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
