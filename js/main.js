@@ -137,18 +137,6 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
-      
-      // Animate skill bars when skills section is visible
-      if (entry.target.classList.contains("skill-item")) {
-        const skillBar = entry.target.querySelector(".skill-bar");
-        if (skillBar) {
-          const width = skillBar.getAttribute("data-width") || "0";
-          setTimeout(() => {
-            skillBar.style.width = width + "%";
-          }, 200);
-        }
-      }
-      
       observer.unobserve(entry.target);
     }
   });
@@ -156,11 +144,6 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all elements with .reveal class
 document.querySelectorAll(".reveal").forEach((el) => {
-  observer.observe(el);
-});
-
-// Observe skill items separately for progress bar animation
-document.querySelectorAll(".skill-item").forEach((el) => {
   observer.observe(el);
 });
 
@@ -355,36 +338,6 @@ window.addEventListener("load", () => {
     document.body.style.opacity = "1";
   }, 100);
 });
-
-// ===== Skill Bars Animation on Scroll =====
-function animateSkillBars() {
-  const skillBars = document.querySelectorAll(".skill-bar");
-  skillBars.forEach((bar) => {
-    const skillItem = bar.closest(".skill-item");
-    if (!skillItem) return;
-    
-    const width = bar.getAttribute("data-width") || "0";
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            bar.style.width = width + "%";
-          }, 300);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3, rootMargin: "0px 0px -50px 0px" });
-    
-    observer.observe(skillItem);
-  });
-}
-
-// Initialize skill bars animation when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', animateSkillBars);
-} else {
-  animateSkillBars();
-}
 
 // ===== Smooth Page Transitions =====
 document.querySelectorAll("nav a, .btn").forEach((link) => {

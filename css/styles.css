@@ -538,6 +538,60 @@ button {
   font-weight: 600;
 }
 
+/* ===== Tag Pills (reusable) ===== */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-gradient-start);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tag-pill i {
+  font-size: 0.8rem;
+}
+
+body.dark .tag-pill {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--primary-gradient-end);
+}
+
+/* Quick Facts row on homepage */
+.quick-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: var(--spacing-lg) 0;
+}
+
+/* Skill tags container */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Card link note (for confidential projects) */
+.card-link-note {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+body.dark .card-link-note {
+  color: var(--dark-text-tertiary);
+}
+
 /* ===== Skills Section ===== */
 .skills-section {
   margin: var(--spacing-2xl) 0;
